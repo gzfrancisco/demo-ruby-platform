@@ -5,8 +5,8 @@ end
 
 6.times do
   Process.fork do
-    puts fibonacci( 40 )
+    puts fibonacci( 34 )
   end
 end
 
-puts fibonacci(41)
+puts fibonacci(35)

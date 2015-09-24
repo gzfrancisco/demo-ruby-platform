@@ -5,8 +5,8 @@ end
 
 6.times do
   Thread.new do
-    puts fibonacci( 40 )
+    puts fibonacci( 35 )
   end
 end
 
-puts fibonacci(41)
+puts fibonacci(36)
