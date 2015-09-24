@@ -5,11 +5,14 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    render json: @users.to_json
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find params[:id]
+    render json: @user.to_json
   end
 
   # GET /users/new
