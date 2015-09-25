@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  def fibonacci( n )
+    return  n  if ( 0..1 ).include? n
+      ( fibonacci( n - 1 ) + fibonacci( n - 2 ) )
+  end
   # GET /users
   # GET /users.json
   def index
+    puts fibonacci( 30 )
     @users = User.all
     render json: @users.to_json
   end
